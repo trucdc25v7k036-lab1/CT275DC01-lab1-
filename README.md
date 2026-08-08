@@ -2,9 +2,9 @@
 
 Học kỳ 3, Năm học: 2025-2026
 
-**Họ tên**: ...
+**Họ tên**: Tran Thi Thu Truc
 
-**MSSV**: ...
+**MSSV**: DC25V7K036
 
 **Lớp HP**: CT275DC01.
 
