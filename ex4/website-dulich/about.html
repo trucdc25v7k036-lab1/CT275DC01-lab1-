@@ -1,60 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Về chúng tôi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<h2>Về chúng tôi</h2>
-		<hr />
-		<img
-			alt="ve-chung-toi"
-			src="img/aboutus.jpg"
-		/>
-		<div>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur.
-			</p>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+        body {
+            margin: 0;
+            padding: 10px 0;
+            background: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            width: 1115px;
+            min-height: 825px;
+            margin: 0 auto;
+            padding: 27px 31px 20px;
+            background: #fff;
+            border: 1px solid #ff0000;
+        }
+
+        header {
+            height: 185px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 25px 0 0;
+        }
+
+        header h1 img {
+            width: 270px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            overflow: hidden;
+            border-radius: 5px;
+            background: #1f527c;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 16px;
+            border-right: 1px solid rgba(255,255,255,.25);
+            background: linear-gradient(#2d6794, #1d4d74);
+        }
+
+        nav a:last-child {
+            border-right: 0;
+        }
+
+        nav a:hover {
+            background: #163f5f;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e5e5e5;
+            margin: 0;
+        }
+
+        main h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 26px 0 19px;
+            color: #222;
+        }
+
+        .about {
+            display: flex;
+            gap: 15px;
+            padding: 25px 0 23px;
+        }
+
+        .about-image {
+            width: 532px;
+            height: 377px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .content {
+            flex: 1;
+            padding-top: 1px;
+        }
+
+        .content p {
+            margin: 0 0 13px;
+            font-size: 18px;
+            line-height: 1.38;
+            text-align: left;
+        }
+
+        footer {
+            height: 69px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 40px;
+        }
+
+        footer a {
+            color: #2584c5;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1150px) {
+            .container {
+                width: 95%;
+            }
+
+            .about-image {
+                width: 50%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                position: static;
+                width: fit-content;
+                margin-top: 15px;
+            }
+
+            header {
+                height: auto;
+                padding-bottom: 25px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image {
+                width: 100%;
+            }
+
+            footer {
+                height: auto;
+                padding-top: 20px;
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            footer ul {
+                flex-wrap: wrap;
+                gap: 15px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="img/logo.jpg" alt="Tourist Sports"></h1>
+
+            <nav>
+                <a href="#">Trang chủ</a>
+                <a href="#">Dịch vụ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">FAQ</a>
+                <a href="#">Liên hệ</a>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <h2>Về chúng tôi</h2>
+            <hr>
+
+            <section class="about">
+                <img class="about-image" src="img/aboutus.jpg" alt="Về chúng tôi">
+
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
+        </main>
+
+        <hr>
+
+        <footer>
+            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
 </html>

@@ -1,57 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FAQ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<h2>FAQ</h2>
-		<hr />
-		<div>
-			<p>1. Tôi có thể trả tiền thông qua PayPal?</p>
-			<p>Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
-		</div>
-		<div>
-			<p>2. Tôi có thể hủy bỏ đặt hàng?</p>
-			<p>Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</p>
-		</div>
-		<div>
-			<p>3. Chính sách hoàn tiền như thế nào?</p>
-			<p>
-				Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý
-				do gì.
-			</p>
-		</div>
-		<div>
-			<p>4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
-			<p>Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.</p>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+        body {
+            margin: 0;
+            padding: 15px 0;
+            background: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            width: 1125px;
+            min-height: 785px;
+            margin: 0 auto;
+            padding: 28px 31px 0;
+            background: #fff;
+            border: 1px solid #f00;
+        }
+
+        header {
+            height: 190px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            padding-top: 28px;
+        }
+
+        header h1 img {
+            width: 270px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        nav a {
+            padding: 10px 17px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-right: 1px solid rgba(255,255,255,.2);
+            background: linear-gradient(#2e6793, #1d4d75);
+        }
+
+        nav a:last-child {
+            border-right: 0;
+        }
+
+        nav a:hover {
+            background: #174465;
+        }
+
+        hr {
+            margin: 0;
+            border: 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        main h2 {
+            margin: 27px 0 19px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 400;
+            color: #222;
+        }
+
+        .faq {
+            padding: 25px 0 50px;
+        }
+
+        .item {
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,.08);
+        }
+
+        .question {
+            margin: 0;
+            padding: 11px 18px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            background: #f4f4f4;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .answer {
+            margin: 0;
+            padding: 19px 18px;
+            min-height: 64px;
+            background: #fff;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .item:not(.open) .question {
+            min-height: 48px;
+        }
+
+        footer {
+            height: 105px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 39px;
+        }
+
+        footer a {
+            color: #2584c5;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1150px) {
+            .container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            body {
+                padding: 0;
+            }
+
+            .container {
+                width: 100%;
+                border-left: 0;
+                border-right: 0;
+            }
+
+            header {
+                height: auto;
+                padding-bottom: 25px;
+            }
+
+            nav {
+                position: static;
+                width: fit-content;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            main h2 {
+                font-size: 34px;
+            }
+
+            footer {
+                height: auto;
+                padding: 25px 0;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+            }
+
+            footer ul {
+                flex-wrap: wrap;
+                gap: 15px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><img src="img/logo.jpg" alt="Tourist Sports"></h1>
+
+            <nav>
+                <a href="#">Trang chủ</a>
+                <a href="#">Dịch vụ</a>
+                <a href="#">Về chúng tôi</a>
+                <a href="#">FAQ</a>
+                <a href="#">Liên hệ</a>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <h2>FAQ</h2>
+            <hr>
+
+            <section class="faq">
+                <div class="item open">
+                    <p class="question">1. Tôi có thể trả tiền thông qua PayPal?</p>
+                    <p class="answer">Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
+                </div>
+
+                <div class="item">
+                    <p class="question">2. Tôi có thể hủy bỏ đặt hàng?</p>
+                </div>
+
+                <div class="item">
+                    <p class="question">3. Chính sách hoàn tiền như thế nào?</p>
+                </div>
+
+                <div class="item">
+                    <p class="question">4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
+                </div>
+            </section>
+        </main>
+
+        <hr>
+
+        <footer>
+            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
 </html>
